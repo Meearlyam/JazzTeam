@@ -13,6 +13,9 @@ import java.util.Scanner;
  */
 public class ConverterController {
 
+    /**
+     * application number to string converter
+     */
     public static final AbstractNumberToStringConverter CONVERTER = new DefaultNumberToStringConverter();
 
     public static void main(String... args) {
@@ -25,10 +28,10 @@ public class ConverterController {
         while (isInDemand) {
             System.out.print("Число или \"х\": ");
             String input = sc.nextLine();
-            long numbIn;
+            long longInput;
             try {
-                numbIn = Long.parseLong(input);
-                System.out.println(numbIn + " = " + CONVERTER.getName(numbIn));
+                longInput = Long.parseLong(input);
+                System.out.println(longInput + " = " + CONVERTER.getName(longInput));
             } catch (NumberFormatException e) {
                 if(input.equals("x")) {
                     isInDemand = false;

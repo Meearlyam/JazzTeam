@@ -35,7 +35,6 @@ public class ThousandsConverter extends AbstractNumberToStringConverter {
 
         if (number >= 1000) {
             if (value.length() > 5) {
-                //определяем последние 2 знакa для нахождения окночания слова тысячи
                 numberTemp = Integer.valueOf(value.substring(value.length() - 5).substring(0, 2), 10);
                 numberTemp2 = Integer.valueOf(value.substring(value.length() - 4).substring(0, 1), 10);
             } else {
@@ -45,11 +44,9 @@ public class ThousandsConverter extends AbstractNumberToStringConverter {
                 numberTemp2 = Integer.valueOf(value.substring(value.length() - 4).substring(0, 1), 10);
             }
 
-            //замена один/одна и два/две
             if ((numberTemp2 == 1 || numberTemp2 == 2) && (numberTemp != 11) && (numberTemp != 12)) {
                 changeSyntax();
                 buffer.append(hundredsConverter.getName(number / 1000));
-                //возвращаем флаг замены
                 changeSyntax();
             } else {
                 buffer.append(hundredsConverter.getName(number / 1000));

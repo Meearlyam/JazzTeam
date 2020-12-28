@@ -13,7 +13,6 @@ public class UnitsConverter extends AbstractNumberToStringConverter {
             "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"};
 
     private static final String[] TOKENS_VARIABLE = new String[]{"одна", "две"};
-    // 1-один/одна 2-два/две
 
     @Override
     public String getName(String value) {

@@ -58,7 +58,6 @@ public class ConverterControllerTest {
 
         System.out.println("Test Program: test 2 - Numbers 1-19");
 
-        //проверка чисел от одного до девятнадцати
         for (int i = 1; i < 20; i++) {
             System.out.println(i + " = " + processor.getName(i));
             assertEquals("Ошибка в числах от 1-ого до 19-и", TOKENS[i - 1], processor.getName(i));

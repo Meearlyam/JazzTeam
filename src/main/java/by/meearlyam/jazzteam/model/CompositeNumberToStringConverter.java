@@ -10,14 +10,13 @@ public class CompositeNumberToStringConverter extends AbstractNumberToStringConv
 
     private static final Scale SCALE = new Scale();
 
-    private HundredsConverter hundredProcessor = new HundredsConverter();
-    private ThousandsConverter thousandProcessor = new ThousandsConverter();
+    private ThousandsConverter thousandConverter = new ThousandsConverter();
     private AbstractNumberToStringConverter lowConverter;
     private int exponent;
 
     public CompositeNumberToStringConverter(int exponent) {
         if (exponent <= 6) {
-            lowConverter = thousandProcessor;
+            lowConverter = thousandConverter;
         } else {
             lowConverter = new CompositeNumberToStringConverter(exponent - 3);
         }
@@ -28,8 +27,8 @@ public class CompositeNumberToStringConverter extends AbstractNumberToStringConv
         return SCALE.getName(getPartDivider());
     }
 
-    protected AbstractNumberToStringConverter getHighProcessor() {
-        return thousandProcessor;
+    protected AbstractNumberToStringConverter getHighConverter() {
+        return thousandConverter;
     }
 
     protected AbstractNumberToStringConverter getLowConverter() {
@@ -60,7 +59,7 @@ public class CompositeNumberToStringConverter extends AbstractNumberToStringConv
             low = value.substring(index);
         }
 
-        String highName = getHighProcessor().getName(high);
+        String highName = getHighConverter().getName(high);
         String lowName = getLowConverter().getName(low);
 
         if (!"".equals(highName)) {

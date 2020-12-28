@@ -31,7 +31,6 @@ public class TensConverter extends AbstractNumberToStringConverter {
             buffer.append(TOKENS[(number / 10) - 2]);
             number %= 10;
             tensFound = true;
-            // numbers 20-99
         }
 
         if (number != 0) {
