@@ -88,7 +88,7 @@ public class ConverterControllerTest {
         InputStream in;
         HSSFWorkbook wb;
         try {
-            in = new FileInputStream("resources/TestData.xls");
+            in = new FileInputStream("src/main/resources/TestData.xls");
             wb = new HSSFWorkbook(in);
 
             long inNumber = 0;
@@ -113,7 +113,6 @@ public class ConverterControllerTest {
                             break;
 
                         default:
-                            //System.out.print("|");
                             break;
                     }
                 }
