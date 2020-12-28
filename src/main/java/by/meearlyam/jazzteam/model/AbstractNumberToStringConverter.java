@@ -13,7 +13,6 @@ public abstract class AbstractNumberToStringConverter {
     static final String SEPARATOR = " ";
     static final int NO_VALUE = -1;
 
-    //отвечает за один/одна и два/две
     static boolean flagSyntax = false;
 
     protected List<Integer> getDigits(long value) {

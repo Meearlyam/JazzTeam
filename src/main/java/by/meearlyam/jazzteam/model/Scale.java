@@ -53,13 +53,7 @@ public class Scale {
             new ScaleUnit(12, "триллион"),
             new ScaleUnit(9, "миллиард"),
             new ScaleUnit(6, "миллион"),
-            new ScaleUnit(3, "тысяч"),
-            new ScaleUnit(-1, "десятых"),
-            new ScaleUnit(-2, "сотых"),
-            new ScaleUnit(-3, "тысячных"),
-            new ScaleUnit(-4, "десятитытсячных"),
-            new ScaleUnit(-5, "стотысячных"),
-            new ScaleUnit(-6, "миллионных"),
+            new ScaleUnit(3, "тысяч")
     };
 
     public String getName(int exponent) {
