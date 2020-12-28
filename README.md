@@ -10,5 +10,4 @@ testing in the following ways:
 To run application choose ConverterController class in your "Run/Debug configurations". In case you want to run 
 tests you need to choose the ConverterControllerTest.
 <br><br>You can find documentation for all classes of this application in the [javadoc](https://github.com/Meearlyam/JazzTeam/tree/master/javadoc/) directory.
-Click [here](https://github.com/Meearlyam/JazzTeam/tree/master/javadoc/index.html) to open overview page. 
-<br>Thank you for your attention :)
+<br><br>Thank you for your attention :)
